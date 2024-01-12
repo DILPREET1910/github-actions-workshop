@@ -1,0 +1,17 @@
+name: series jobs
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 3s && echo test
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 5s && echo build
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo test 

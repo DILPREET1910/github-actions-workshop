@@ -1,0 +1,55 @@
+name: without matrix
+run-name: ${{ github.actor }} has initiated non-matrix.yml
+on: [push]
+jobs: 
+  ubuntu-node-10:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '10.0.0'
+
+      - run: node --version
+
+  ubuntu-node-12:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '12.0.0'
+
+      - run: node --version
+
+  windows-node-10:
+    runs-on: windows-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '10.0.0'
+
+      - run: node --version  
+    
+  windows-node-12:
+    runs-on: windows-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '12.0.0'
+
+      - run: node --version

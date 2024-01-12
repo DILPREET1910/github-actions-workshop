@@ -1,0 +1,11 @@
+name: display the contents of temp.txt
+on: [push]
+jobs:
+  temp-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+
+      - name: cat the contents of temp.txt
+        run: cat temp.txt
